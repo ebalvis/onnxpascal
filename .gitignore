@@ -1,0 +1,26 @@
+# Build outputs
+bin/
+lib/
+*.exe
+*.o
+*.ppu
+*.dcu
+*.a
+*.res
+*.compiled
+
+# Native libs / models (no versionar)
+*.so
+*.so.*
+*.dll
+*.dylib
+*.onnx
+
+# Manuscritos / paper (privado, no versionar en el repo público)
+paper/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

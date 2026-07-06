@@ -1,0 +1,11 @@
+{
+  "title": "onnxpascal: native ONNX Runtime inference for Object Pascal",
+  "description": "A single-unit library to run ONNX models from Free Pascal and Delphi by calling the ONNX Runtime C API natively, without a C toolchain (no CGO). Verified on FPC/Windows, FPC/Linux and Delphi/Windows.",
+  "upload_type": "software",
+  "license": "MIT",
+  "version": "0.3.0",
+  "creators": [
+    { "name": "Balvís, Eduardo", "orcid": "0000-0003-0195-0502" }
+  ],
+  "keywords": ["ONNX", "ONNX Runtime", "Object Pascal", "Free Pascal", "Delphi", "machine learning", "edge inference"]
+}

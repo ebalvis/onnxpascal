@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  fpc-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Free Pascal
+        run: sudo apt-get update && sudo apt-get install -y fpc
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ONNX Runtime + model tooling
+        run: python -m pip install --upgrade pip onnxruntime onnx numpy scikit-learn skl2onnx
+
+      - name: Build and test (compila, genera modelos, corre 12/12 + bench)
+        run: |
+          chmod +x build.sh
+          ./build.sh
